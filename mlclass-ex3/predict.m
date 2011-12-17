@@ -21,16 +21,18 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
-a1 = [ones(m, 1) X];
+a1 = [ones(m, 1) X]; % add column of 1s to X
 
-z2 = a1 * Theta1';
+%In Octave, when you compute z(2) = \theta(1) * a(1), be sure that you index (and if necessary, transpose) X correctly so that you get a(l) as a column vector.
+
+z2 = Theta1 * a1';
 a2 = sigmoid(z2);
-a2 = [ones(size(a2, 1), 1) a2];
+a2 = [ones(1, size(a2, 2)); a2]; %add row of 1s, because X is transposed
 
-z3 = a2 * Theta2';
+z3 = Theta2 * a2;
 a3 = sigmoid(z3);
 
-[maxval, p] = max(a3, [], 2);
+[maxval, p] = max(a3', [], 2);
 
 % =========================================================================
 
