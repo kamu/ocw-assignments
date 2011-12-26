@@ -20,6 +20,7 @@ grad = zeros(size(theta));
 %as in regularisation, it is from j >= 1, this skips j=0 (or, in octave j=1)
 regvector = ones(1, size(theta)(1));
 regvector(1,1) = 0;
+%probably should have just used theta(2:end)
 
 regidmat = eye(size(theta)(1));
 regidmat(1,1) = 0;
