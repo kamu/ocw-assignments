@@ -191,7 +191,15 @@ end
 
 function [login password] = loginPrompt()
   % Prompt for password
-  [login password] = basicPrompt();
+  global MLLogin;
+  global MLPassword;
+
+  if exist('MLLogin') || exist('MLPassword')
+    login = MLLogin;
+	password = MLPassword;
+  else
+    [login password] = basicPrompt();
+  end
   
   if isempty(login) || isempty(password)
     login = []; password = [];

@@ -23,12 +23,32 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
+%Cvals = [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30];
+%sigmavals = [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30];
 
+% matrix for the results, the rows are cvals and the columns are sigmavals
+%results = zeros(size(Cvals, 2), size(sigmavals, 2));
 
+%for ci = 1:size(Cvals, 2)
+	%for si = 1:size(sigmavals, 2)
+		%C = Cvals(ci);
+		%sigma = sigmavals(si);
 
+		% train the model using Xtrain
+		%model = svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
 
+		% get the predictions for the cross validation set
+		%predictions = svmPredict(model, Xval);
 
+		% store the predictions in the results matrix
+		%results(ci, si) = mean(double(predictions ~= yval));
+	%end
+%end
 
+%results
+
+C = 1;
+sigma = 0.1;
 % =========================================================================
 
 end

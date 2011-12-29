@@ -32,10 +32,10 @@ fprintf('Loading and Visualizing Data ...\n')
 load('ex6data1.mat');
 
 % Plot training data
-plotData(X, y);
+%plotData(X, y);
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 %% ==================== Part 2: Training Linear SVM ====================
 %  The following code will train a linear SVM on the dataset and plot the
@@ -84,10 +84,10 @@ fprintf('Loading and Visualizing Data ...\n')
 load('ex6data2.mat');
 
 % Plot training data
-plotData(X, y);
+%plotData(X, y);
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 %% ========== Part 5: Training SVM with RBF Kernel (Dataset 2) ==========
 %  After you have implemented the kernel, we can now use it to train the 
